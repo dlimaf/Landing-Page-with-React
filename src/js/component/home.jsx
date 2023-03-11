@@ -1,26 +1,38 @@
 import React from "react";
+import Card from "./card.jsx";
+import Footer from "./footer.jsx";
+import Jumbotrom from "./jumbotrom.jsx";
+import Navbar from "./navbar.jsx";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
-const Home = () => {
+
+function Cimiento () {
 	return (
-		<div className="text-center">
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
+	<div>
+		<div className="row">
+			<Navbar/>
 		</div>
-	);
-};
+		<div className="container">
+		    <div className="row pb-3">
+				<div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+			        <Jumbotrom/>
+				</div>
+		    </div>
+		    <div className="d-flex justify-content-center">
+			    <div className="row">
+			        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12"><Card/></div>
+			        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12"><Card/></div>
+			        <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12"><Card/></div>
+				    <div className="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12"><Card/></div>
+			    </div>
+		    </div>
+		</div>
+		<div className="row">
+			<Footer/>
+		</div>
+	</div>
+	)
+}
 
-export default Home;
+
+export default Cimiento;
